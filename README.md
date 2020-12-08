@@ -21,3 +21,11 @@ The website won't be using any frontend frameworks such as Bootstrap, Materializ
 
 
 <h2> Old Website Images</h2>
+
+<h4>Homepage</h4>
+
+![Preview](img/oldwebsite.JPG)
+
+<h4>Hub section</h4>
+
+![Preview](img/oldwebsite2.JPG)
