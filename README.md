@@ -1,8 +1,8 @@
 <h1>Portfolio Website</h>
 
 >>>>
-Not so much quick and simple, but a culmination of knowledge from 2020 without the weight of being more than what its supposed to be.
 
+Not so much quick and simple, but a culmination of knowledge from 2020 without the weight of being more than what its supposed to be.
 
 <h2> The Why </h2>
 
