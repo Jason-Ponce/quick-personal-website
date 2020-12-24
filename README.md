@@ -1,9 +1,8 @@
-<h1>Portfolio Website</h>
-
-
-Not so much quick and simple, but a culmination of knowledge from 2020 without the weight of being more than what its supposed to be.
+<h1>Portfolio Website</h1>
 
 >>>>
+
+Not so much quick and simple, but a culmination of knowledge from 2020 without the weight of being more than what its supposed to be.
 
 <h2> The Why </h2>
 
@@ -21,3 +20,11 @@ The website won't be using any frontend frameworks such as Bootstrap, Materializ
 
 
 <h2> Old Website Images</h2>
+
+<h4>Homepage</h4>
+
+![Preview](img/oldwebsite.JPG)
+
+<h4>Hub section</h4>
+
+![Preview](img/oldwebsite2.JPG)
