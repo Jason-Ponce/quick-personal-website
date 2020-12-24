@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+:root{
+    --bg-color: #3D3A4B;        //Independence
+    --primary-color: #FAF3DD;   //Eggshell
+    --secondary-color: #8FC0A9; //Cambridge Blue
+    --tertiary-color: #272D2D;  //Deep Space Sparkle
+    // --tertiary-color: #3D5A6C;  //Deep Space Sparkle
+    --accent-color: #C8D5B9;    //Laurel Green
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+/* utilities */
+
+.white{
+    color: whitesmoke;
+}
+
+.black{
+    color: black;
+}
+
+.small-font{
+    font-size: 8px;
+}
+
+.x24{
+    font-size: 24px;
+}
+
+.x32{
+    font-size: 32px;
+}
+
+.x48{
+    font-size: 48px;
+}
+
+.x64{
+    font-size: 64px;
+}
+
+.accent-color{
+    color: var(--accent-color);
+}
+
+/* End of utilities */
+
+nav{
+    height: fit-content;
+    width: 100vw;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 1px 10px 0px var(--secondary-color);
+    padding: .25em;
+
+    a{
+        margin-left: 2vw;
+        font-size: 1rem;
+        color: var(--primary-color);
+    }
+
+    a:link{
+        text-decoration: none;
+        // color: initial;
+    }
+
+    a:hover{
+        color: var(--bg-color);
+        transition: .5;
+    }
+
+    aside {
+        margin-right: 2vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        align-self: center;
+
+        a {
+            margin-left: 1rem;
+            color: var(--primary-color);
+
+            ion-icon{
+                vertical-align: bottom;
+            }
+        }
+
+        a:link{
+            text-decoration: none;
+            // color: initial;
+        }
+
+        a:hover{
+            color: var(--accent-color);
+            transition: .2s;
+        }
+    }
+}
+

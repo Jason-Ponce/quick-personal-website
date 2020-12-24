@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+:root {
+  --bg-color: #3D3A4B;
+  --primary-color: #FAF3DD;
+  --secondary-color: #8FC0A9;
+  --tertiary-color: #272D2D;
+  --accent-color: #C8D5B9;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+/* utilities */
+.white {
+  color: whitesmoke;
+}
+
+.black {
+  color: black;
+}
+
+.small-font {
+  font-size: 8px;
+}
+
+.x24 {
+  font-size: 24px;
+}
+
+.x32 {
+  font-size: 32px;
+}
+
+.x48 {
+  font-size: 48px;
+}
+
+.x64 {
+  font-size: 64px;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+/* End of utilities */
+nav {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100vw;
+  background-color: var(--tertiary-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0px 1px 10px 0px var(--secondary-color);
+          box-shadow: 0px 1px 10px 0px var(--secondary-color);
+  padding: .25em;
+}
+
+nav a {
+  margin-left: 2vw;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+nav a:link {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--bg-color);
+  -webkit-transition: .5;
+  transition: .5;
+}
+
+nav aside {
+  margin-right: 2vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+nav aside a {
+  margin-left: 1rem;
+  color: var(--primary-color);
+}
+
+nav aside a ion-icon {
+  vertical-align: bottom;
+}
+
+nav aside a:link {
+  text-decoration: none;
+}
+
+nav aside a:hover {
+  color: var(--accent-color);
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+/*# sourceMappingURL=style.css.map */
