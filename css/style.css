@@ -236,8 +236,10 @@ section .card-section {
   row-gap: 1rem;
   -webkit-column-gap: .5rem;
           column-gap: .5rem;
-  width: 100%;
-  border-right: 3px solid var(--accent-color);
+  margin: 0 1vw 5vh 0;
+  padding: 5vh 0 5vw 0;
+  -webkit-box-shadow: 15px 0px 5px -11px var(--secondary-color);
+          box-shadow: 15px 0px 5px -11px var(--secondary-color);
   position: relative;
 }
 
