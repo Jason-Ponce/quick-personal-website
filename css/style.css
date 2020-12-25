@@ -7,12 +7,24 @@
 }
 
 :root {
+  font-size: 16px;
   --bg-color: #3D3A4B;
   --primary-color: #FAF3DD;
   --secondary-color: #8FC0A9;
   --tertiary-color: #272D2D;
   --accent-color: #C8D5B9;
-  font-size: 16px;
+  --scale-size: scale(1.25);
+  --transition-default: .25s;
+  --h-step-one: 1vw;
+  --h-step-two: 2vw;
+  --h-step-three: 3vw;
+  --h-step-four: 4vw;
+  --h-step-five: 5vw;
+  --v-step-one: 1vh;
+  --v-step-two: 2vh;
+  --v-step-three: 3vh;
+  --v-step-four: 4vh;
+  --v-step-five: 5vh;
 }
 
 body {
@@ -32,8 +44,22 @@ body {
   font-size: 8px;
 }
 
+.x20 {
+  font-size: 20px;
+}
+
+.x20-png {
+  height: 20px;
+  width: 20px;
+}
+
 .x24 {
   font-size: 24px;
+}
+
+.x24-png {
+  height: 24px;
+  width: 24px;
 }
 
 .x32 {
@@ -46,6 +72,10 @@ body {
 
 .x64 {
   font-size: 64px;
+}
+
+.vertical-align-txtbtm {
+  vertical-align: text-bottom;
 }
 
 .accent-color {
@@ -71,12 +101,15 @@ nav {
           justify-content: space-between;
   -webkit-box-shadow: 0px 1px 10px 0px var(--secondary-color);
           box-shadow: 0px 1px 10px 0px var(--secondary-color);
-  padding: .25em;
+  padding: .5rem 1.5rem .5rem 1.5rem;
+  overflow-x: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 nav a {
-  margin-left: 2vw;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
 }
 
@@ -85,19 +118,20 @@ nav a:link {
 }
 
 nav a:hover {
-  color: var(--bg-color);
-  -webkit-transition: .5;
-  transition: .5;
+  color: var(--accent-color);
+  -webkit-transition: var(--transition-default);
+  transition: var(--transition-default);
 }
 
 nav aside {
-  margin-right: 2vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-row-align: center;
       align-self: center;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
 }
 
 nav aside a {
@@ -106,7 +140,7 @@ nav aside a {
 }
 
 nav aside a ion-icon {
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 nav aside a:link {
@@ -115,7 +149,105 @@ nav aside a:link {
 
 nav aside a:hover {
   color: var(--accent-color);
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transform: var(--scale-size);
+          transform: var(--scale-size);
+  -webkit-transition: var(--transition-default);
+  transition: var(--transition-default);
+}
+
+section {
+  width: 100vw;
+  position: relative;
+}
+
+section header {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "topLeft topRight" "summary summary";
+  margin: 4vh 0 3vh 0;
+  row-gap: 2rem;
+}
+
+section header h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: topLeft;
+  color: white;
+  background-color: var(--tertiary-color);
+  font-size: 48px;
+  opacity: .75;
+  border-right: 3px solid var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+  border-radius: 5px 10px 20px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: var(--h-step-three);
+  padding: .5vh 5vw .5vh 3vw;
+  -webkit-box-shadow: 4px 5px 10px -4px var(--secondary-color);
+          box-shadow: 4px 5px 10px -4px var(--secondary-color);
+}
+
+section header p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: summary;
+  margin-left: var(--h-step-five);
+  color: white;
+}
+
+section header .links {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: topRight;
+  justify-self: flex-end;
+  margin-right: var(--h-step-three);
+  color: white;
+  line-height: 1.6rem;
+}
+
+section header .links aside a {
+  color: white;
+  text-decoration: none;
+}
+
+section header .links aside a:hover {
+  text-decoration: underline;
+  color: var(--accent-color);
+  -webkit-transition: var(--transition-default);
+  transition: var(--transition-default);
+}
+
+section .card-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  justify-items: center;
+  row-gap: 1rem;
+  -webkit-column-gap: .5rem;
+          column-gap: .5rem;
+  width: 100%;
+  border-right: 3px solid var(--accent-color);
+  position: relative;
+}
+
+section .card-section .card {
+  height: 50%;
+  width: 25%;
+  background-color: var(--secondary-color);
+}
+
+section .card-section .card h2 {
+  font-size: 100%;
 }
 /*# sourceMappingURL=style.css.map */
