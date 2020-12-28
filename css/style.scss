@@ -1,105 +1,33 @@
-* {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    font-family: 'Libre Franklin', sans-serif;
+@import "color-scheme";
+@import "reset";
+@import "font-style";
+@import "utilities";
+
+@mixin indent($vw-indent) {
+    margin-left: $vw-indent;
+    margin-right: $vw-indent;
 }
 
-:root{
-    font-size: 16px;
-    --bg-color: #3D3A4B;        //Independence
-    --primary-color: #FAF3DD;   //Eggshell
-    --secondary-color: #8FC0A9; //Cambridge Blue
-    --tertiary-color: #272D2D;  //Deep Space Sparkle
-    // --tertiary-color: #3D5A6C;  //Deep Space Sparkle
-    --accent-color: #C8D5B9;    //Laurel Green
-    --scale-size: scale(1.25);
-    --transition-default: .25s;
-    --h-step-one: 1vw;
-    --h-step-two: 2vw;
-    --h-step-three: 3vw;
-    --h-step-four: 4vw;
-    --h-step-five: 5vw;
-    --v-step-one: 1vh;
-    --v-step-two: 2vh;
-    --v-step-three: 3vh;
-    --v-step-four: 4vh;
-    --v-step-five: 5vh;
-}
 
 body{
-    background-color: var(--bg-color);
+    background-color: $bg-color;
 }
-
-/* utilities */
-
-.white{
-    color: whitesmoke;
-}
-
-.black{
-    color: black;
-}
-
-.small-font{
-    font-size: 8px;
-}
-
-.x20{
-    font-size: 20px;
-}
-
-.x20-png{
-    height: 20px;
-    width: 20px;
-}
-
-.x24{
-    font-size: 24px;
-}
-
-.x24-png{
-    height: 24px;
-    width: 24px;
-}
-
-.x32{
-    font-size: 32px;
-}
-
-.x48{
-    font-size: 48px;
-}
-
-.x64{
-    font-size: 64px;
-}
-
-.vertical-align-txtbtm{
-    vertical-align: text-bottom;
-}
-
-.accent-color{
-    color: var(--accent-color);
-}
-
-/* End of utilities */
 
 nav{
     height: fit-content;
     width: 100vw;
-    background-color: var(--tertiary-color);
+    background-color: $tertiary-color;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0px 1px 10px 0px var(--secondary-color);
+    box-shadow: 0px 1px 10px 0px $secondary-color;
     padding: .5rem 1.5rem .5rem 1.5rem;
     overflow-x: hidden;
     align-items: center;
 
     a{
         font-size: 1.4rem;
-        color: var(--primary-color);
+        color: $primary-color;
     }
 
     a:link{
@@ -108,8 +36,8 @@ nav{
     }
 
     a:hover{
-        color: var(--accent-color);
-        transition: var(--transition-default);
+        color: $accent-color;
+        transition: $transition-default;
     }
 
     aside {
@@ -120,7 +48,7 @@ nav{
 
         a {
             margin-left: 1rem;
-            color: var(--primary-color);
+            color: $primary-color;
 
             ion-icon{
                 vertical-align: middle;
@@ -133,9 +61,9 @@ nav{
         }
 
         a:hover{
-            color: var(--accent-color);
-            transform: var(--scale-size);
-            transition: var(--transition-default);
+            color: $accent-color;
+            transform: $scale-size;
+            transition: $transition-default;
         }
     }
 }
@@ -156,30 +84,36 @@ section{
 
         h1{
             grid-area: topLeft;
-            color: white;
-            background-color: var(--tertiary-color);
+            color: $primary-color;
+            background-color: $tertiary-color;
             font-size: 48px;
             opacity: .75;
-            border-right: 3px solid var(--accent-color);
-            border-bottom: 3px solid var(--accent-color);
+            border-right: 3px solid $accent-color;
+            border-bottom: 3px solid $accent-color;
             border-radius: 5px 10px 20px 10px;
             width: fit-content;
-            margin-left: var(--h-step-three);
+            margin-left: $vh3;
             padding: .5vh 5vw .5vh 3vw;
-            // box-shadow: -5px -5px 10px 0px var(--accent-color); //top left glow 
-            box-shadow: 4px 5px 10px -4px var(--secondary-color); //bottom right glow
+            box-shadow: 4px 5px 10px -4px $secondary-color; //bottom right glow
+            border: 2px double $primary-color;
         }
     
         p{
             grid-area: summary;
-            margin-left: var(--h-step-five);
-            color: white;
+            margin-left: $vh3;
+            margin-right: $vh3;
+            color: $primary-color;
+            background-color: $tertiary-color;
+            padding: 16px;
+            border-radius: 5px 10px 20px 10px;
+            box-shadow: 0px 5px 5px 0px $secondary-color;
+            border: 2px double $primary-color;
         }
 
         .links{
             grid-area: topRight;
             justify-self: flex-end;
-            margin-right: var(--h-step-three);
+            margin-right: $vh3;
             color: white;
             line-height: 1.6rem;
 
@@ -192,8 +126,8 @@ section{
     
                 a:hover{
                     text-decoration: underline;
-                    color: var(--accent-color);
-                    transition: var(--transition-default);
+                    color: $accent-color;
+                    transition: $transition-default;
                 }
             }
         }   
@@ -206,19 +140,52 @@ section{
         justify-items: center;
         row-gap: 1rem;
         column-gap: .5rem;
-        margin: 0 1vw 5vh 0;
-        padding: 5vh 0 5vw 0;
-        box-shadow: 15px 0px 5px -11px var(--secondary-color);
         position: relative;
 
         .card{
-            // flex: 100px;
-            height: 50%;
-            width: 25%;
-            background-color: var(--secondary-color);
+            height: fit-content;
+            width: 90%;
+            background-color: $secondary-color;
+            padding: 1rem;
+            border-radius: 5px 15px 40px 15px;
 
             h2{
-                font-size: 100%;
+                font-size: 150%;
+                margin-bottom: 8px;
+                width: fit-content;
+                padding-bottom: 1vh;
+            }
+
+            img{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                margin-bottom: 16px;
+            }
+
+            p{
+                @include indent($vw3);
+                margin-bottom: 8px;
+            }
+
+            .skills{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 95%;
+
+                div{
+                    border-radius: 10px;
+                    font-size: 75%;
+                    background-color: $tertiary-color;
+                    color: $accent-color;
+                    width: fit-content;
+                    padding: 8px;
+                }
             }
         }
         

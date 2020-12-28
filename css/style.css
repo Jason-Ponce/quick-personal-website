@@ -3,32 +3,22 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Libre Franklin', sans-serif;
 }
 
 :root {
   font-size: 16px;
-  --bg-color: #3D3A4B;
-  --primary-color: #FAF3DD;
-  --secondary-color: #8FC0A9;
-  --tertiary-color: #272D2D;
-  --accent-color: #C8D5B9;
-  --scale-size: scale(1.25);
-  --transition-default: .25s;
-  --h-step-one: 1vw;
-  --h-step-two: 2vw;
-  --h-step-three: 3vw;
-  --h-step-four: 4vw;
-  --h-step-five: 5vw;
-  --v-step-one: 1vh;
-  --v-step-two: 2vh;
-  --v-step-three: 3vh;
-  --v-step-four: 4vh;
-  --v-step-five: 5vh;
 }
 
-body {
-  background-color: var(--bg-color);
+nav {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+p {
+  font-family: 'Roboto Slab', serif;
 }
 
 /* utilities */
@@ -83,12 +73,16 @@ body {
 }
 
 /* End of utilities */
+body {
+  background-color: #3D3A4B;
+}
+
 nav {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 100vw;
-  background-color: var(--tertiary-color);
+  background-color: #272D2D;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,8 +93,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-shadow: 0px 1px 10px 0px var(--secondary-color);
-          box-shadow: 0px 1px 10px 0px var(--secondary-color);
+  -webkit-box-shadow: 0px 1px 10px 0px #8FC0A9;
+          box-shadow: 0px 1px 10px 0px #8FC0A9;
   padding: .5rem 1.5rem .5rem 1.5rem;
   overflow-x: hidden;
   -webkit-box-align: center;
@@ -110,7 +104,7 @@ nav {
 
 nav a {
   font-size: 1.4rem;
-  color: var(--primary-color);
+  color: #FAF3DD;
 }
 
 nav a:link {
@@ -118,9 +112,9 @@ nav a:link {
 }
 
 nav a:hover {
-  color: var(--accent-color);
-  -webkit-transition: var(--transition-default);
-  transition: var(--transition-default);
+  color: #C8D5B9;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 nav aside {
@@ -136,7 +130,7 @@ nav aside {
 
 nav aside a {
   margin-left: 1rem;
-  color: var(--primary-color);
+  color: #FAF3DD;
 }
 
 nav aside a ion-icon {
@@ -148,11 +142,11 @@ nav aside a:link {
 }
 
 nav aside a:hover {
-  color: var(--accent-color);
-  -webkit-transform: var(--scale-size);
-          transform: var(--scale-size);
-  -webkit-transition: var(--transition-default);
-  transition: var(--transition-default);
+  color: #C8D5B9;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 section {
@@ -176,20 +170,21 @@ section header h1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: topLeft;
-  color: white;
-  background-color: var(--tertiary-color);
+  color: #FAF3DD;
+  background-color: #272D2D;
   font-size: 48px;
   opacity: .75;
-  border-right: 3px solid var(--accent-color);
-  border-bottom: 3px solid var(--accent-color);
+  border-right: 3px solid #C8D5B9;
+  border-bottom: 3px solid #C8D5B9;
   border-radius: 5px 10px 20px 10px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  margin-left: var(--h-step-three);
+  margin-left: 3vh;
   padding: .5vh 5vw .5vh 3vw;
-  -webkit-box-shadow: 4px 5px 10px -4px var(--secondary-color);
-          box-shadow: 4px 5px 10px -4px var(--secondary-color);
+  -webkit-box-shadow: 4px 5px 10px -4px #8FC0A9;
+          box-shadow: 4px 5px 10px -4px #8FC0A9;
+  border: 2px double #FAF3DD;
 }
 
 section header p {
@@ -197,8 +192,15 @@ section header p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: summary;
-  margin-left: var(--h-step-five);
-  color: white;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  color: #FAF3DD;
+  background-color: #272D2D;
+  padding: 16px;
+  border-radius: 5px 10px 20px 10px;
+  -webkit-box-shadow: 0px 5px 5px 0px #8FC0A9;
+          box-shadow: 0px 5px 5px 0px #8FC0A9;
+  border: 2px double #FAF3DD;
 }
 
 section header .links {
@@ -206,7 +208,7 @@ section header .links {
   -ms-grid-column: 2;
   grid-area: topRight;
   justify-self: flex-end;
-  margin-right: var(--h-step-three);
+  margin-right: 3vh;
   color: white;
   line-height: 1.6rem;
 }
@@ -218,9 +220,9 @@ section header .links aside a {
 
 section header .links aside a:hover {
   text-decoration: underline;
-  color: var(--accent-color);
-  -webkit-transition: var(--transition-default);
-  transition: var(--transition-default);
+  color: #C8D5B9;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
 }
 
 section .card-section {
@@ -236,20 +238,75 @@ section .card-section {
   row-gap: 1rem;
   -webkit-column-gap: .5rem;
           column-gap: .5rem;
-  margin: 0 1vw 5vh 0;
-  padding: 5vh 0 5vw 0;
-  -webkit-box-shadow: 15px 0px 5px -11px var(--secondary-color);
-          box-shadow: 15px 0px 5px -11px var(--secondary-color);
   position: relative;
 }
 
 section .card-section .card {
-  height: 50%;
-  width: 25%;
-  background-color: var(--secondary-color);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 90%;
+  background-color: #8FC0A9;
+  padding: 1rem;
+  border-radius: 5px 15px 40px 15px;
 }
 
 section .card-section .card h2 {
-  font-size: 100%;
+  font-size: 150%;
+  margin-bottom: 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 1vh;
+}
+
+section .card-section .card img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+section .card-section .card p {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 8px;
+}
+
+section .card-section .card .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+}
+
+section .card-section .card .skills div {
+  border-radius: 10px;
+  font-size: 75%;
+  background-color: #272D2D;
+  color: #C8D5B9;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px;
 }
 /*# sourceMappingURL=style.css.map */

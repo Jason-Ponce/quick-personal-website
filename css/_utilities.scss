@@ -1,0 +1,66 @@
+/* utilities */
+
+.white{
+    color: whitesmoke;
+}
+
+.black{
+    color: black;
+}
+
+.small-font{
+    font-size: 8px;
+}
+
+.x20{
+    font-size: 20px;
+}
+
+.x20-png{
+    height: 20px;
+    width: 20px;
+}
+
+.x24{
+    font-size: 24px;
+}
+
+.x24-png{
+    height: 24px;
+    width: 24px;
+}
+
+.x32{
+    font-size: 32px;
+}
+
+.x48{
+    font-size: 48px;
+}
+
+.x64{
+    font-size: 64px;
+}
+
+.vertical-align-txtbtm{
+    vertical-align: text-bottom;
+}
+
+.accent-color{
+    color: var(--accent-color);
+}
+
+$scale-size: scale(1.25);
+$transition-default: .25s;
+$vw1: 1vw;
+$vw2: 2vw;
+$vw3: 3vw;
+$vw4: 4vw;
+$vw5: 5vw;
+$vh1: 1vh;
+$vh2: 2vh;
+$vh3: 3vh;
+$vh4: 4vh;
+$vh5: 5vh;
+
+/* End of utilities */
