@@ -26,24 +26,72 @@
     <title>JasonPonce.Info</title>
 </head>
 <body>
-    <nav>
-        <a href="http://jasonponce.info" class="x20">JasonPonce.Info</a>
+    <nav id="navbar">
+        <!-- <a href="http://jasonponce.info" class="x20" data-nav-name="home" id="home">JasonPonce.Info</a> -->
+        <a href="#" class="x20" data-nav-name="home" id="home">JasonPonce.Info</a>
         <aside class="nav-list">
-            <a href="#resume-tab">
-                <ion-icon name="reader-outline" class="x24" data-post-name="Resume"></ion-icon>
+            <a href="#">
+                <ion-icon name="reader-outline" class="x24" data-nav-name="resume" id="resume"></ion-icon>
             </a>
-            <a href="#projects-tab">
-                <ion-icon name="terminal-outline" class="x24" data-post-name="Projects"></ion-icon>
+            <a href="#">
+                <ion-icon name="terminal-outline" class="x24" data-nav-name="projects" id="projects"></ion-icon>
             </a>
-            <a href="#aboutme-tab">
-                <ion-icon name="person-circle-outline" class="x24" data-post-name="About Me"></ion-icon>
+            <a href="#">
+                <ion-icon name="person-circle-outline" class="x24" data-nav-name="about" id="about"></ion-icon>
             </a>
         </aside>
     </nav>
-    <!-- <section>
-        <h1>Resume</h1>
-    </section> -->
-    <section class="projects">
+    <section id="home-section">
+        <header class="project-header">
+            <h1>Home</h1>
+            <p>Current projects frequently updated on my GitHub.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam officiis a voluptatem! Error officiis, dolorem, harum fugit consequuntur placeat maxime aliquid quasi repellendus maiores atque.
+            </p>
+            <div class="links">
+                <aside>
+                    <img src="img/GitHub-Mark-Light-32px.png" alt="Github Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://github.com/Jason-Ponce">Github</a>
+                </aside>
+                <aside>
+                    <img src="img/LI-In-Bug.png" alt="LinkedIn Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://www.linkedin.com/in/jason-ponce-15984317b/">LinkedIn</a>
+                </aside>
+            </div>
+        </header>
+        <div class="card-section">
+            <article class="card">
+                <h2>Blah</h2>
+                <img src="./img/pexels-john-petalcurin-2115257.jpg" alt="default img" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ex distinctio placeat. Provident praesentium commodi iure cupiditate ducimus at nulla ut sed dignissimos accusamus consectetur nihil sint fuga, quos necessitatibus.</p>
+            </article>
+        </div>
+    </section>
+    <section id="resume-section">
+        <header class="project-header">
+            <h1>Resume</h1>
+            <p>Current projects frequently updated on my GitHub.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam officiis a voluptatem! Error officiis, dolorem, harum fugit consequuntur placeat maxime aliquid quasi repellendus maiores atque.
+            </p>
+            <div class="links">
+                <aside>
+                    <img src="img/GitHub-Mark-Light-32px.png" alt="Github Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://github.com/Jason-Ponce">Github</a>
+                </aside>
+                <aside>
+                    <img src="img/LI-In-Bug.png" alt="LinkedIn Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://www.linkedin.com/in/jason-ponce-15984317b/">LinkedIn</a>
+                </aside>
+            </div>
+        </header>
+        <div class="card-section">
+            <article class="card">
+                <h2>Blah</h2>
+                <img src="./img/pexels-john-petalcurin-2115257.jpg" alt="default img" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ex distinctio placeat. Provident praesentium commodi iure cupiditate ducimus at nulla ut sed dignissimos accusamus consectetur nihil sint fuga, quos necessitatibus.</p>
+            </article>
+        </div>
+    </section>
+    <section id="projects-section">
         <header class="project-header">
             <h1>Projects</h1>
             <p>Current projects frequently updated on my GitHub.
@@ -198,9 +246,31 @@
             </article>
         </div>
     </section>
-    <!-- <section>
-        <h1>About Me</h1>
-    </section> -->
+    <section id="about-section">
+        <header class="project-header">
+            <h1>Resume</h1>
+            <p>Current projects frequently updated on my GitHub.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam officiis a voluptatem! Error officiis, dolorem, harum fugit consequuntur placeat maxime aliquid quasi repellendus maiores atque.
+            </p>
+            <div class="links">
+                <aside>
+                    <img src="img/GitHub-Mark-Light-32px.png" alt="Github Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://github.com/Jason-Ponce">Github</a>
+                </aside>
+                <aside>
+                    <img src="img/LI-In-Bug.png" alt="LinkedIn Logo" class="vertical-align-txtbtm x20-png">
+                    <a href="https://www.linkedin.com/in/jason-ponce-15984317b/">LinkedIn</a>
+                </aside>
+            </div>
+        </header>
+        <div class="card-section">
+            <article class="card">
+                <h2>Blah</h2>
+                <img src="./img/pexels-john-petalcurin-2115257.jpg" alt="default img" >
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ex distinctio placeat. Provident praesentium commodi iure cupiditate ducimus at nulla ut sed dignissimos accusamus consectetur nihil sint fuga, quos necessitatibus.</p>
+            </article>
+        </div>
+    </section>
     <script src="js/app.js"></script>
 </body>
 </html>
