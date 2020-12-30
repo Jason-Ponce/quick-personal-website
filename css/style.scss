@@ -1,7 +1,9 @@
 @import "color-scheme";
 @import "reset";
+@import "bg-svg";
 @import "font-style";
 @import "utilities";
+@import "scrollbar";
 
 @mixin indent($vw-indent) {
     margin-left: $vw-indent;
@@ -11,7 +13,11 @@
 
 body{
     background-color: $bg-color;
+    position: relative;
+    z-index: 1;
+    
 }
+
 
 nav{
     height: fit-content;
@@ -30,12 +36,14 @@ nav{
 
     a{
         font-size: 1.4rem;
+    }
+
+    a:visited{
         color: $primary-color;
     }
 
     a:link{
         text-decoration: none;
-        // color: initial;
     }
 
     a:hover{
@@ -51,7 +59,6 @@ nav{
 
         a {
             margin-left: 1rem;
-            color: $primary-color;
 
             ion-icon{
                 vertical-align: middle;
@@ -60,7 +67,6 @@ nav{
 
         a:link{
             text-decoration: none;
-            // color: initial;
         }
 
         a:hover{
@@ -87,15 +93,14 @@ section{
 
         h1{
             grid-area: topLeft;
-            color: $primary-color;
             background-color: $tertiary-color;
             font-size: 48px;
-            opacity: .75;
+            opacity: .9;
             border-right: 3px solid $accent-color;
             border-bottom: 3px solid $accent-color;
             border-radius: 5px 10px 20px 10px;
             width: fit-content;
-            margin-left: $vh3;
+            margin-left: $vw2;
             padding: .5vh 5vw .5vh 3vw;
             box-shadow: 4px 5px 10px -4px $secondary-color; //bottom right glow
             border: 2px double $primary-color;
@@ -103,27 +108,32 @@ section{
     
         p{
             grid-area: summary;
-            margin-left: $vh3;
-            margin-right: $vh3;
-            color: $primary-color;
+            @include indent($vw5);
             background-color: $tertiary-color;
             padding: 16px;
             border-radius: 5px 10px 20px 10px;
-            box-shadow: 0px 5px 5px 0px $secondary-color;
+            box-shadow: 0px 2px 5px 0px $secondary-color;
             border: 2px double $primary-color;
         }
 
         .links{
             grid-area: topRight;
             justify-self: flex-end;
-            margin-right: $vh3;
-            color: white;
+            margin-right: $vw2;
+            white-space: nowrap;
             line-height: 1.6rem;
+            opacity: .9;
+            background-color: $tertiary-color;
+            box-shadow: -4px 5px 10px -4px $secondary-color;
+            border: 2px double $primary-color;
+            padding: .5vh 3vw .5vh 5vw;
+            border-radius: 10px 5px 10px 20px;
+            
 
             aside{
 
                 a{
-                    color: white;
+                    color: $primary-color;
                     text-decoration: none;
                 }
     
@@ -148,15 +158,30 @@ section{
         .card{
             height: fit-content;
             width: 90%;
-            background-color: $secondary-color;
+            background-color: $tertiary-color;
             padding: 1rem;
-            border-radius: 5px 15px 40px 15px;
+            border-radius: 5px 10px 20px 10px;
+            box-shadow: 0px 2px 5px 0px $secondary-color;
+            border: 2px double $primary-color;
 
-            h2{
-                font-size: 150%;
+            .topic{
+                display: flex;
                 margin-bottom: 8px;
-                width: fit-content;
                 padding-bottom: 1vh;
+                justify-content: space-around;
+                
+
+                h2{
+                    font-size: 150%;
+                    width: 100%;
+                }
+
+                time{
+                    font-size: 125%;
+                    opacity: .9;
+                    margin-right: $vw3;
+                }
+    
             }
 
             img{
@@ -167,11 +192,17 @@ section{
                 height: auto;
                 border-radius: 10px;
                 margin-bottom: 16px;
+                border-bottom: 10px solid $bg-color;
+                border-top: 10px solid $bg-color;
             }
 
             p{
-                @include indent($vw3);
+                @include indent($vw1);
                 margin-bottom: 8px;
+                padding: .5rem;
+                // background-color: $secondary-color;
+                // color: $tertiary-color;
+                // border-radius: 10px;
             }
 
             .skills{
@@ -185,7 +216,6 @@ section{
                     border-radius: 10px;
                     font-size: 75%;
                     background-color: $tertiary-color;
-                    color: $accent-color;
                     width: fit-content;
                     padding: 8px;
                 }
@@ -194,6 +224,7 @@ section{
         
     }
 }
+
 
 #resume-section,
 #projects-section,
