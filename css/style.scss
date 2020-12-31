@@ -205,28 +205,114 @@ section{
                 // border-radius: 10px;
             }
 
+            .pdf-frame{
+                width: 100%;
+                height: 400px;
+            }
+
             .skills{
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
                 width: 95%;
+                margin: 0 auto;
 
                 div{
                     border-radius: 10px;
                     font-size: 75%;
-                    background-color: $tertiary-color;
+                    background-color: $accent-color;
                     width: fit-content;
                     padding: 8px;
+                    color: $bg-color;
                 }
+
+                .inverted{
+                    color: $accent-color;
+                    background-color: $bg-color;
+                }
+
+                .squeeze{
+                    @include indent($vh2)
+                }
+            }
+
+            .inner-card{
+                background-color: $accent-color;
+                box-shadow: 0px 2px 3px 0px $secondary-color;
+                color: $bg-color;
+                border-radius: 10px;
+                margin: 0 auto;
+                border: 4px solid $bg-color;
+                padding: 8px;
+                margin-top: 8px;
+                margin-bottom: 16px;
+            }
+
+            .skills-card{
+                display: flex;
+                row-gap: 4px;
+                column-gap: 4px;
+                display: grid;
+                grid-template-columns: repeat(4, auto);
+                grid-template-rows: repeat(2, auto);
+                justify-items: center;
+
+                .row{
+                    font-size: 100%;
+                    border-bottom: 2px solid black;
+                    padding: 2px;
+                }
+                .column{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 75%;
+                }
+            }
+
+            .project-card{
+
+                h4{
+                    margin-left: $vw1;
+                    
+                    
+                    a{
+                        text-decoration: none;
+                        color: $bg-color;
+                    }
+                    a:visited{
+                        color: initial;
+                    }
+                    a:hover{
+                        transition: .2s;
+                        text-decoration: underline;
+                        color: $bg-color;
+                    }
+
+                }
+            }
+
+            .card-h3{
+                @include indent($vh1);
+                
             }
         }
         
     }
 }
 
+.resume-section{
+    
+}
+// unhide for production
+// #resume-section,
+// #projects-section,
+// #about-section{
+//     display: none;
+// }
 
-#resume-section,
+//testing usage, so I dont have to keep clicking the button when live server reloads
+#home-section,
 #projects-section,
 #about-section{
     display: none;
