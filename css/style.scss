@@ -365,9 +365,6 @@ section{
     }
 }
 
-.resume-section{
-    
-}
 // unhide for production
 // #resume-section,
 // #projects-section,
@@ -378,7 +375,56 @@ section{
 //testing usage, so I dont have to keep clicking the button when live server reloads
 #about-section,
 #resume-section,
-#projects-section{
+#home-section{
     display: none;
 }
 
+
+@media only screen and (min-width: 1024px) {  
+
+    section{
+
+        header{
+
+            h1{
+                padding: .5vh 4vw .5vh 3vw;
+            }
+
+            p{
+                width: 50%;
+                display: flex;
+                justify-self: center;
+            }
+
+            .links{
+                padding: .5vh 2vw .5vh 2vw;
+            }
+        }
+        
+        .card-section{
+            
+            .card{
+                width: 25%;
+                max-height: 40vh;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .topic{
+
+                    h2{
+                        margin-left: $vw1;
+                    }
+
+                    time{
+                        margin-right: $vw1;
+                    }
+                }
+
+                img{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
