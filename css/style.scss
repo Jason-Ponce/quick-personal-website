@@ -223,8 +223,10 @@ section{
                     font-size: 75%;
                     background-color: $accent-color;
                     width: fit-content;
+                    margin-top: 8px;
                     padding: 8px;
                     color: $bg-color;
+                    
                 }
 
                 .inverted{
@@ -235,6 +237,11 @@ section{
                 .squeeze{
                     @include indent($vh2)
                 }
+
+                .left-align{
+                    justify-content: flex-start !important;
+                }
+
             }
 
             .inner-card{
@@ -247,6 +254,28 @@ section{
                 padding: 8px;
                 margin-top: 8px;
                 margin-bottom: 16px;
+
+                .item-date{
+                    margin-left: $vw1;
+                    margin-top: $vh1;
+                    margin-bottom: $vh1;
+                    display: grid;
+                    grid-template-rows: repeat(1fr, auto);
+
+                    div:nth-child(even){
+                        margin-left: $vw2;
+                        font-style: italic;
+                        font-weight: 400;
+                    }
+
+                    div:nth-child(odd){
+                        font-weight: 500;
+                    }
+                    ul{
+                        background-color: red;
+                    }
+                }
+
             }
 
             .skills-card{
@@ -296,6 +325,41 @@ section{
                 @include indent($vh1);
                 
             }
+
+            .email-form{
+                display: flex;
+                flex-direction: column;
+                row-gap: 8px;
+                padding: 8px;
+
+                #message{
+                    height: 8vh;
+                    padding: 4px;
+                }
+
+                label{
+                    font-size: 125%;
+                }
+
+                input, textarea{
+                    border-radius: 5px;
+                    border: 0px;
+                }
+
+
+
+                input:last-child{
+                    height: 5vh;
+                    width: 20vw;
+                    font-size: large;
+                    border-radius: 10px;
+                    color: $accent-color;
+                    background-color: $bg-color;
+                    margin-left:auto ;
+                    margin-right: $vw5;
+                    margin-top: 4px;
+                }
+            }
         }
         
     }
@@ -312,9 +376,9 @@ section{
 // }
 
 //testing usage, so I dont have to keep clicking the button when live server reloads
-#home-section,
-#projects-section,
-#about-section{
+#about-section,
+#resume-section,
+#projects-section{
     display: none;
 }
 
