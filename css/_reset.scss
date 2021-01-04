@@ -9,3 +9,14 @@
     overflow-x: hidden;
     color: $primary-color;
 }
+
+a{
+    text-decoration: none;
+    color: inherit;
+    text-shadow: -1px -1px 1px rgba(150, 150, 150, 1);
+}
+
+a:visited{
+    color: inherit;
+}
+
