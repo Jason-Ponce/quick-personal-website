@@ -38,3 +38,53 @@ function removeHighlight(el){
     const navEl = document.getElementById(el);
     navEl.style.borderBottom = "initial";
 }
+
+// document.addEventListener("click", function(e){
+//     alert(e.target.id);
+// }, false);
+
+document.addEventListener("click", function(e){
+    const target = e.target;
+    switch (target.dataset.popup) {
+        case "open":
+            modalInit(target);
+            break;
+        default:
+            break;
+    }
+    switch (target.dataset.modal) {
+        case "close":
+            resetModal();
+            break;
+        default:
+            break;
+    }
+    }, false);
+
+function modalInit(target){
+    const modal = document.querySelector(".modal");
+    // modalBodyStyler();
+    modal.style.display = "block";
+    insertImg(target);
+}
+
+
+function insertImg(target){
+    const modalImg = document.getElementById(target.id).src;
+    const innerModal = document.querySelector(".modal-img");
+    const nodeImg = document.createElement("img");
+    nodeImg.setAttribute('src', modalImg);
+    nodeImg.setAttribute("height", "100%");
+    nodeImg.setAttribute("width", "100%");
+    nodeImg.setAttribute("data-modal", "close");
+    innerModal.append(nodeImg);
+}
+
+function resetModal(){
+    const modal = document.querySelector(".modal");
+    const innerModal = document.querySelector(".modal-img");
+    modal.style.display = "none";
+    while (innerModal.firstChild) {
+        innerModal.removeChild(innerModal.firstChild);
+    }
+}
