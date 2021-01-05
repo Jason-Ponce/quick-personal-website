@@ -337,21 +337,29 @@ section .card-section .card .topic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 8px;
   padding-bottom: 1vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 section .card-section .card .topic h2 {
   font-size: 150%;
   width: 100%;
+  grid-area: title;
+  white-space: nowrap;
 }
 
 section .card-section .card .topic time {
   font-size: 125%;
   opacity: .9;
-  margin-right: 3vw;
+  grid-area: time;
+  margin-left: 3vw;
+}
+
+section .card-section .card .topic h3 {
+  grid-area: live;
+  margin-left: 3vw;
 }
 
 section .card-section .card img {
@@ -433,6 +441,9 @@ section .card-section .card .skills .inverted {
 section .card-section .card .skills .squeeze {
   margin-left: 2vh;
   margin-right: 2vh;
+  padding: 8px;
+  min-width: 64px;
+  text-align: center;
 }
 
 section .card-section .card .skills .left-align {
@@ -580,6 +591,13 @@ section .card-section .card .email-form input:last-child {
   display: none;
 }
 
+#about-section,
+#resume-section,
+#home-section,
+#projects-section {
+  margin-bottom: 15vh;
+}
+
 @media only screen and (min-width: 1024px) {
   section header h1 {
     padding: .5vh 4vw .5vh 3vw;
@@ -599,16 +617,44 @@ section .card-section .card .email-form input:last-child {
     max-height: 40vh;
     overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  section .card-section .card .topic {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "title time live";
+    -ms-grid-columns: 70% 15% 15%;
+        grid-template-columns: 70% 15% 15%;
   }
   section .card-section .card .topic h2 {
-    margin-left: 1vw;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: title;
   }
   section .card-section .card .topic time {
-    margin-right: 1vw;
+    margin-left: 0;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: time;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  section .card-section .card .topic h3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: live;
+    -ms-grid-column-align: end;
+        justify-self: end;
   }
   section .card-section .card img {
     width: 90%;
     margin: 0 auto;
+  }
+  section .card-section .card:hover {
+    max-height: 50vh;
+    -webkit-transition: 1s;
+    transition: 1s;
   }
 }
 /*# sourceMappingURL=style.css.map */

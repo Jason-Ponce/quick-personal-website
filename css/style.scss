@@ -190,20 +190,30 @@ section{
 
             .topic{
                 display: flex;
+                flex-wrap: wrap;
                 margin-bottom: 8px;
                 padding-bottom: 1vh;
-                justify-content: space-around;
+                
                 
 
                 h2{
                     font-size: 150%;
                     width: 100%;
+                    grid-area: title;
+                    white-space: nowrap;
                 }
 
                 time{
                     font-size: 125%;
                     opacity: .9;
-                    margin-right: $vw3;
+                    grid-area: time;
+                    margin-left: 3vw;
+                }
+
+                h3{
+                    grid-area: live;
+                    margin-left: 3vw;
+                    
                 }
     
             }
@@ -233,9 +243,6 @@ section{
                 @include indent($vw1);
                 margin-bottom: 8px;
                 padding: .5rem;
-                // background-color: $secondary-color;
-                // color: $tertiary-color;
-                // border-radius: 10px;
             }
 
             .pdf-frame{
@@ -268,7 +275,10 @@ section{
                 }
 
                 .squeeze{
-                    @include indent($vh2)
+                    @include indent($vh2);
+                    padding: 8px;
+                    min-width: 64px;
+                    text-align: center;
                 }
 
                 .left-align{
@@ -398,6 +408,7 @@ section{
     }
 }
 
+
 // unhide for production
 // #resume-section,
 // #projects-section,
@@ -410,6 +421,13 @@ section{
 #resume-section,
 #home-section{
     display: none;
+}
+
+#about-section,
+#resume-section,
+#home-section,
+#projects-section{
+    margin-bottom: 15vh;
 }
 
 
@@ -441,15 +459,27 @@ section{
                 max-height: 40vh;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                transition: 1s;
 
                 .topic{
+                    display: grid;
+                    grid-template-areas:
+                    "title time live";
+                    grid-template-columns: 70% 15% 15%;
 
                     h2{
-                        margin-left: $vw1;
+                        grid-area: title;
                     }
 
                     time{
-                        margin-right: $vw1;
+                        margin-left: 0;
+                        grid-area: time;
+                        justify-self: end;
+                    }
+
+                    h3{
+                        grid-area: live;
+                        justify-self: end;
                     }
                 }
 
@@ -458,6 +488,10 @@ section{
                     margin: 0 auto;
                 }
 
+            }
+            .card:hover{
+                max-height: 50vh;
+                transition: 1s;
             }
         }
     }
