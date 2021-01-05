@@ -119,6 +119,32 @@ body {
   z-index: 1;
 }
 
+body .modal {
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+body .modal .modal-img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 80vh;
+  width: 90vw;
+  background-color: blue;
+}
+
 nav {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -344,6 +370,17 @@ section .card-section .card img {
   margin-bottom: 16px;
   border-bottom: 10px solid #3D3A4B;
   border-top: 10px solid #3D3A4B;
+}
+
+section .card-section .card .expand-img {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+section .card-section .card .expand-img:hover {
+  opacity: .7;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 section .card-section .card p {
