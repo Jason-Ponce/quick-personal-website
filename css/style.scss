@@ -59,7 +59,7 @@ nav{
     z-index: 1;
 
     a{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     a:visited{
@@ -243,6 +243,8 @@ section{
                 @include indent($vw1);
                 margin-bottom: 8px;
                 padding: .5rem;
+
+
             }
 
             .pdf-frame{
@@ -255,8 +257,7 @@ section{
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
-                width: 95%;
-                margin: 0 auto;
+                width: 100%;
 
                 div{
                     border-radius: 10px;
@@ -279,10 +280,6 @@ section{
                     padding: 8px;
                     min-width: 64px;
                     text-align: center;
-                }
-
-                .left-align{
-                    justify-content: flex-start !important;
                 }
 
             }
@@ -319,6 +316,10 @@ section{
                     }
                 }
 
+            }
+
+            .inner-card.non-mobile-email-card{
+                display: none;
             }
 
             .skills-card{
@@ -403,6 +404,10 @@ section{
                     margin-top: 4px;
                 }
             }
+
+            .email-btn{
+                margin-left: 3vw;
+            }
         }
         
     }
@@ -410,18 +415,18 @@ section{
 
 
 // unhide for production
-// #resume-section,
-// #projects-section,
-// #about-section{
-//     display: none;
-// }
-
-//testing usage, so I dont have to keep clicking the button when live server reloads
-#about-section,
 #resume-section,
-#home-section{
+#projects-section,
+#about-section{
     display: none;
 }
+
+//testing usage, so I dont have to keep clicking the button when live server reloads
+// #about-section,
+// #resume-section,
+// #home-section{
+//     display: none;
+// }
 
 #about-section,
 #resume-section,
@@ -433,6 +438,20 @@ section{
 
 @media only screen and (min-width: 1024px) {  
 
+    nav{
+        
+
+        a{
+            margin-left: 3vw;
+            font-size: 2rem;
+        }
+
+        aside{
+            margin-right: 4vw;
+            column-gap: 1.5rem;
+        }
+    }
+
     section{
 
         header{
@@ -442,7 +461,7 @@ section{
             }
 
             p{
-                width: 50%;
+                width: fit-content;
                 display: flex;
                 justify-self: center;
             }
@@ -455,8 +474,8 @@ section{
         .card-section{
             
             .card{
-                width: 25%;
-                max-height: 40vh;
+                // width: 50%;
+                height: fit-content;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 transition: 1s;
@@ -484,15 +503,53 @@ section{
                 }
 
                 img{
-                    width: 90%;
+                    width: 60%;
                     margin: 0 auto;
                 }
 
-            }
-            .card:hover{
-                max-height: 50vh;
-                transition: 1s;
+                .email-btn{
+                    display: none;
+                }
+
+                .skills{
+                    font-size: 125%;
+                    width: 50%;
+                    margin: 0 auto;
+                    justify-content: space-evenly;
+                    
+                    div{
+                        min-width: 100px;
+                        text-align: center;
+                    }
+
+                    .inverted.squeeze{
+                        min-width: 100px;
+                    }
+                }
+
+                .skills-card{
+                    
+                    .row{
+                        font-size: 150%;
+                    }
+                    .column{
+                        font-size: 100%;
+                    }
+                }
+
+                .pdf-frame{
+                    width: 100%;
+                    height: 800px;
+                }
             }
         }
+    }
+
+    #about-section,
+    #resume-section,
+    #home-section,
+    #projects-section{
+        width: 80%;
+        margin: 0 auto;
     }
 }
