@@ -14,8 +14,6 @@
     <meta property="og:site_name"           content="Jason Ponce" />
     <meta property="og:image"               content="http://www.example.com/image.jpg" />
     <link rel="stylesheet" href="css/style.css">
-    <!-- GSAP Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <!-- https://ionicons.com/ -->
     <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script> 
     <!-- https://ionicons.com/ -->
@@ -32,22 +30,21 @@
 </head>
 <body>
     <nav id="navbar">
-        <!-- <a href="http://jasonponce.info" class="x20" data-nav-name="home" id="home">JasonPonce.Info</a> -->
-        <a href="#" class="x20" data-nav-name="home" id="home">JasonPonce.Info</a>
-        <aside class="nav-list">
+        <a href="http://www.jasonponce.info/"  data-nav-name="home" id="home">JasonPonce.Info</a>
+        <aside>
             <a href="#">
-                <ion-icon name="reader-outline" class="x24" data-nav-name="resume" id="resume"></ion-icon>
+                <ion-icon name="reader-outline"  data-nav-name="resume" id="resume"></ion-icon>
             </a>
             <a href="#">
-                <ion-icon name="terminal-outline" class="x24" data-nav-name="projects" id="projects"></ion-icon>
+                <ion-icon name="terminal-outline"  data-nav-name="projects" id="projects"></ion-icon>
             </a>
             <a href="#">
-                <ion-icon name="person-circle-outline" class="x24" data-nav-name="about" id="about"></ion-icon>
+                <ion-icon name="person-circle-outline"  data-nav-name="about" id="about"></ion-icon>
             </a>
         </aside>
     </nav>
     <section id="home-section">
-        <header class="project-header">
+        <header>
             <h1>Home</h1>
             <p>
                 Check out my Resume, Projects, and About Me to learn more. 
@@ -69,7 +66,7 @@
                 <h3 class="card-h3">- Quick-Personal-Website -</h3>
                 <div class="inner-card">
                     <p>
-                        An interim replacement for my previous portfolio website. Which is the website you're currently looking at. 
+                        I wasn't happy with how the old portfolio website looked like. Because this was the third website I had used Python+Flask with. I was confident of the progress I would achieve while coding. The problem is that in the middle of working on it. I was learning new skills and the website became a horrible mismatch of code. I am planning to do a rewrite of my old website. Or incorporating whatever old code I can for a new stack. 
                     </p>
                     <div class="skills ">
                         <div class="inverted ">HTML</div>
@@ -78,20 +75,16 @@
                         <div class="inverted ">JavaScript</div>
                     </div>
                 </div>
-                <img src="./img/quick-personal-website_.png" alt="default img" >
+                <img src="./img/quick-personal-website_.png" alt="a screenshot of the current website you're on." class="expand-img" id="quick-img-home" data-popup="open">
                 <div class="inner-card">
-                    <h3 class="card-h3">New Skills</h3>
-                    <div class="skills">
-                        <div class="inverted">SASS</div>
-                    </div>
-                    <h3 class="card-h3">Next Skills</h3>
-                    <div class="skills">
-                        <div class="inverted">NodeJs</div>
-                        <div class="inverted">ReactJs</div>
-                        <div ></div>
-                        <div ></div>
-                        <div ></div>
-                    </div>
+                    <h3 class="card-h3">Next Projects</h3>
+                    <p>
+                        I'll be working on updating and patching security issues from old projects such as HeroesDonate, TheConnect, the old portfolio website Personal-Website. The reason for that, is to bring them back live on Heroku. 
+                    </p>
+
+                    <p>
+                        I'm also planning on learning the MERN Stack, (MongoDB, ExpressJS, ReactJS, NodeJS) to broaden my skills. Once I feel confident enough to have a basic grasp of the stack. I'll begin working on two website ideas I have. The first one would be a practice website using NodeJS and ReactJS for learning more about accessibility options and making sure its useable for screen readers. The second idea would be using the entire MERN stack to make a website that utilizes an API with stored data in a database to make a graph.
+                    </p>
                 </div>
             </article>
         </div>
@@ -158,7 +151,7 @@
                     <h4>
                         <a href="https://github.com/Jason-Ponce/fitness-calc">Pizzeria</a>
                     </h4>
-                    <p>Simple website I made that was responsive on mobile views and with flex/grid menu items.</p>
+                    <p>A responsive flex and grid restaurant menu for a website. Mostly a practice website in learning how to make a mobile and desktop website. What I learned was mobile first was important.</p>
                     <div class="skills">
                         <div class="inverted squeeze">HTML5</div>
                         <div class="inverted squeeze">CSS</div>
@@ -169,7 +162,7 @@
                     <h4>
                         <a href="https://github.com/Jason-Ponce/fitness-calc">Fitness-Calc</a>
                     </h4>
-                    <p>A web calculator that takes in the inputs of a user's heart rate, age, weight, excerises levels and returns a "motivational" intensity bar.</p>
+                    <p>A fitness calculator that takes in your age, gender, heart rate, physical activity time and lets you know how much calories you burned and a nice intensity bar.</p>
                     <div class="skills">
                         <div class="inverted squeeze">HTML</div>
                         <div class="inverted squeeze">CSS</div>
@@ -180,7 +173,7 @@
                     <h4>
                         <a href="https://github.com/Jason-Ponce/quick-personal-website">Quick-Personal-Website</a>
                     </h4>
-                    <p>Currently the website you're looking at. This website intended use is temporarily replace my old portfolio website as I update it properly.</p>
+                    <p>I wasn't happy with how the old portfolio website looked like. Because this was the third website I had used Python+Flask with. I was confident of the progress I would achieve while coding. The problem is that in the middle of working on it. I was learning new skills and the website became a horrible mismatch of code. I am planning to do a rewrite of my old website. Or incorporating whatever old code I can for a new stack. </p>
                     <div class="skills ">
                         <div class="inverted ">HTML</div>
                         <div class="inverted ">CSS</div>
@@ -221,7 +214,6 @@
                 <div class="topic">
                     <h2>Resume</h2>
                 </div>
-                <!-- <iframe src="https://drive.google.com/file/d/1OQo0qFLsb2wjXWyUyol4cSV2CpDrXyJa/preview" class="pdf-frame"></iframe> -->
                 <iframe src="./files/ponce_jason_resume.pdf" class="pdf-frame"></iframe>
             </article>
         </div>
@@ -230,7 +222,7 @@
         <header class="project-header">
             <h1>Projects</h1>
             <p>
-                2019 was mostly applying and learning more HTML, CSS, JavaScript. I'm looking forwards to working on React.Js, Node.Js, API, and databases in the next coming months. Along with beginning my Masters.
+                For the year 2019, most of my projects was applying and learning more HTML, CSS, JavaScript.I'm looking forwards to working on learning and applying the MERN stack with fullstack websites that use API and database storage in the next coming months.
             </p>
             <div class="links">
                 <aside>
@@ -252,7 +244,10 @@
                 </div>
                 <img src="./img/theconnect.png" alt="default img" class="expand-img" id="theconnect-img" data-popup="open">
                 <p>
-                    My first project. A team based project where we worked on creating a web app that connected students, professors, and companies to form internships.
+                    TheConnect was a team based project. We worked on creating a web app that connected students, professors, and companies to form internships. This was my first time working any sort of frontend skills. TheConnect used BootStrap for the UI and was a shortlived live website. 
+                </p>
+                <p>
+                    I am working on bringing this back live.
                 </p>
                 <div class="skills">
                     <div>
@@ -280,7 +275,13 @@
                 </div>
                 <img src="./img/heroesdonate.png" alt="screenshot of HeroesDonate website." class="expand-img" id="heroesdonate-img" data-popup="open">
                 <p>
-                    Blockchain digital donation website. Capstone project for my Undergraduate degree. A copy of my final design document is available                 
+                    HeroesDonate was my capstone project for my undergraduate degree. It was a web app with the intentions of making a digital donation website to connect donors to organizations. Donors would donate electronically giftable items, like Steam Keys, to organizations that had need for them. Or an organization could ask for donations and donors could fufill it. The website was akin to DonorsChoose but for ebooks, video games, and giftable subscriptions.               
+                </p>
+                <p>
+                    What made HeroesDonate different was that there was a public ledger to ensure that the donated goods were actually donated and not taken. The plan was to use a blockchain to verify transactions and publicly announce them without compromising the donation on the public ledger. 
+                </p>
+                <p>
+                    Then I used IPFS(InterPlanetary File System) hosted on a group of private nodes in Google Cloud to host the donation. The donations were hashed and the IPFS key was saved to my database. If you would like to see more about the project you can download my final proposal right
                     <a href="./files/Ponce_Jason_Final_Design.docx" id="download">
                         here.
                     </a>
@@ -307,7 +308,7 @@
                     <h3><strike>[Live]</strike></h3>
                 </div>
                 <img src="./img/oldwebsite.png" alt="screenshot of my last personal website" class="expand-img" id="personal-img" data-popup="open" >
-                <p>Python + Flask Microweb FullStack website. The original portfolio website.</p>
+                <p>Python + Flask Microweb FullStack website. The original portfolio website. Originally the website had to be updated manually whenever I wanted to add a new page. In early 2020 I began working on my own CMS to create, update, manage my content.</p>
                 <div class="skills">
                     <div>
                         JavaScript
@@ -334,7 +335,7 @@
                 </div>
                 <img src="./img/Pizzeria_.png" alt="a screenshot of the Pizzeria website" class="expand-img" id="pizzeria-img" data-popup="open">
                 <p>
-                    A responsive flex and grid restaurant menu for a website.
+                    A responsive flex and grid restaurant menu for a website. Mostly a practice website in learning how to make a mobile and desktop website. What I learned was mobile first was important.
                 </p>
                 <div class="skills">
                     <div class="squeeze">
@@ -378,7 +379,7 @@
                 </div>
                 <img src="./img/quick-personal-website_.png" alt="a screenshot of the current website you're on." class="expand-img" id="quick-img" data-popup="open">
                 <p>
-                    I just wanted to create a website to temporarily replace my old portfolio website. Until I rewrote it and did it proper.
+                    I wasn't happy with how the old portfolio website looked like. Because this was the third website I had used Python+Flask with. I was confident of the progress I would achieve while coding. The problem is that in the middle of working on it. I was learning new skills and the website became a horrible mismatch of code. I am planning to do a rewrite of my old website. Or incorporating whatever old code I can for a new stack. 
                 </p>
                 <div class="skills">
                     <div class="squeeze">
@@ -425,7 +426,7 @@
             </article>
             <article class="card">
                 <h2>Contact</h2>
-                <div class="inner-card">
+                <div class="inner-card non-mobile-email-card">
                     <form action="mailto:jason.ponce.work+contact@gmail.com" method="POST" enctype="multipart/form-data" class="email-form" name="EmailForm">
                         <label for="name">Name</label>
                         <input type="text" id="name">
@@ -436,6 +437,7 @@
                         <input type="submit" value="Send" class="inverted">
                     </form>
                 </div>
+                    <a href="mailto:jason.ponce.work+contact@gmail.com" class="email-btn">Inbox me!</a>
             </article>
         </div>
     </section>
