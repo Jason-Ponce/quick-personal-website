@@ -4,7 +4,6 @@ document.getElementById("about").addEventListener("click", swapViews);
 
 function swapViews(){
     const navEl = this;
-    console.log(this);
     const navList = {
         home: "home",
         resume: "resume",
@@ -34,14 +33,9 @@ function highlightNavEl(el){
 }
 
 function removeHighlight(el){
-    console.log("removeHighlight: " + el);
     const navEl = document.getElementById(el);
     navEl.style.borderBottom = "initial";
 }
-
-// document.addEventListener("click", function(e){
-//     alert(e.target.id);
-// }, false);
 
 document.addEventListener("click", function(e){
     const target = e.target;
@@ -63,7 +57,6 @@ document.addEventListener("click", function(e){
 
 function modalInit(target){
     const modal = document.querySelector(".modal");
-    // modalBodyStyler();
     modal.style.display = "block";
     insertImg(target);
 }
